@@ -1,0 +1,228 @@
+body {
+  background: #f4f7fb;
+  color: #1f2937;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.navbar-custom {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler {
+  color: #ffffff !important;
+}
+
+.navbar-custom .nav-link {
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.navbar-custom .nav-link {
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-custom .nav-link svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.modal-dialog {
+  max-width: 480px;
+  margin: 1.2rem auto;
+}
+
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.16);
+  padding: 0;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 1.25rem 1.5rem 0.75rem;
+}
+
+.modal-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.btn-outline-primary {
+  border-radius: 9999px;
+  border-color: rgba(255,255,255,0.25);
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+}
+
+.task-section {
+  padding-bottom: 40px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.Cards {
+  position: relative;
+  min-height: 180px;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card-header h4 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.task-status {
+  display: inline-flex;
+  align-items: center;
+  background: #eef2ff;
+  color: #4338ca;
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+.card-detail {
+  margin: 0 0 18px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.card-meta {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.read-toggle {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.read-toggle:hover {
+  text-decoration: underline;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 9999px;
+  background: #f8fafc;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.card-actions button:hover {
+  background: #eef2ff;
+  transform: translateY(-1px);
+}
+
+button[type='submit'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  border-radius: 9999px;
+  padding: 9px 16px;
+  font-size: 0.95rem;
+}
+
+.modal-content {
+  border-radius: 18px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  font-size: 0.95rem;
+  padding: 0.72rem 0.95rem;
+}
