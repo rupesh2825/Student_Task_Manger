@@ -1,5 +1,14 @@
 version: '3.9'
 services:
+   frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    restart: unless-stopped
+
+    
   backend:
     build:
       context: ./Backend
@@ -8,12 +17,4 @@ services:
       - ./Backend/.env
     ports:
       - '5000:5000'
-    restart: unless-stopped
-
-  frontend:
-    build:
-      context: ./Frontend
-      dockerfile: Dockerfile
-    ports:
-      - '80:80'
     restart: unless-stopped
