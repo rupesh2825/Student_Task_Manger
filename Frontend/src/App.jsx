@@ -10,6 +10,7 @@ import { Plus } from 'lucide-react';
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
+import API from './axios';
 
 function App() {
 
@@ -36,7 +37,7 @@ function App() {
   async function getData() {
 
     try {
-      const res = await axios.get('/api/')
+      const res = await API.get('/')
       setData(res.data)
     } catch (err) {
       console.log(err)
@@ -46,7 +47,7 @@ function App() {
   async function addData(e) {
     e.preventDefault()
     try {
-      await axios.post('/api/add', { task, detail, deadline, status: status || 'Panding' })
+      await API.post('/add', { task, detail, deadline, status: status || 'Panding' })
       setTask('')
       setDetail('')
       setDeadline('')
@@ -73,7 +74,7 @@ function App() {
     if (!editingItem) return
 
     try {
-      await axios.put(`/api/update/${editingItem._id}`, {
+      await API.put(`/update/${editingItem._id}`, {
         task,
         detail,
         deadline,
@@ -94,7 +95,7 @@ function App() {
 
   async function deleteData(id) {
     try {
-      await axios.delete(`/api/delete/${id}`)
+      await API.delete(`/delete/${id}`)
       getData()
     } catch (err) {
       console.log(err)
